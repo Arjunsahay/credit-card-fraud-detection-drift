@@ -75,3 +75,40 @@ Simulates incoming transactions using fixed-size batches (e.g., 5,000 rows). Eac
    - Predict and evaluate on current batch
 
 ### 🖥️ Console Output Example:
+
+📦 Processing Batch 55
+⚠️ Drift detected in feature: V3 (p=0.0443)
+🔄 Drift detected — retraining model
+C:\Users\Krish\AppData\Local\Programs\Python\Python312\Lib\site-packages\xgboost\training.py:183: UserWarning: [09:01:43] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:738:
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+📊 Evaluation:
+              precision    recall  f1-score   support
+
+           0     1.0000    1.0000    1.0000      4991
+           1     1.0000    1.0000    1.0000         9
+
+    accuracy                         1.0000      5000
+   macro avg     1.0000    1.0000    1.0000      5000
+weighted avg     1.0000    1.0000    1.0000      5000
+
+
+📦 Processing Batch 56
+⚠️ Drift detected in feature: V4 (p=0.0469)
+🔄 Drift detected — retraining model
+C:\Users\Krish\AppData\Local\Programs\Python\Python312\Lib\site-packages\xgboost\training.py:183: UserWarning: [09:01:43] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:738:
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+📊 Evaluation:
+              precision    recall  f1-score   support
+
+           0     1.0000    0.9998    0.9999      4992
+           1     0.8889    1.0000    0.9412         8
+
+    accuracy                         0.9998      5000
+   macro avg     0.9444    0.9999    0.9705      5000
+weighted avg     0.9998    0.9998    0.9998      5000
+
+
